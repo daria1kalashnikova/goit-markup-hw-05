@@ -564,6 +564,7 @@ footer .social-icons-list {
 
 .footer-btn-svg {
   fill: var(--light);
+  flex-shrink: 0;
 }
 
 .modal-overlay {
