@@ -494,7 +494,7 @@
                 type="email"
                 placeholder="E-mail"
             /></label>
-            <button class="footer-btn btn" type="button">
+            <button class="footer-btn btn" type="submit">
               Subscribe
               <svg class="footer-btn-svg" width="24" height="24">
                 <use href="./images/icons.svg#telegram"></use>
@@ -548,37 +548,36 @@
               </svg>
             </div>
           </div>
-          <div class="modal-field-wrapper">
+          <div class="modal-field-wrapper textarea-fieldset">
             <label class="modal-lable" for="comment">Comment</label>
             <textarea
               class="modal-input"
               name="comment"
-              rows="6"
               id="comment"
               placeholder="Text input"
             ></textarea>
           </div>
+
+          <div class="policy-wrapper">
+            <input
+              class="checkbox-browser visually-hidden"
+              type="checkbox"
+              value="accept"
+              name="policy"
+              id="policy"
+            />
+            <label class="modal-lable" for="policy">
+              <span class="checkbox-custom">
+                <svg class="checkbox-custom-svg" width="10" height="8">
+                  <use href="./images/icons.svg#check"></use>
+                </svg> </span
+              >I accept the terms and conditions of the
+              <a class="policy-link" href=""> Privacy Policy</a>
+            </label>
+          </div>
+
+          <button class="btn modal-btn" type="submit">Send</button>
         </form>
-
-        <div class="policy-wrapper">
-          <input
-            class="checkbox-browser visually-hidden"
-            type="checkbox"
-            value="accept"
-            name="policy"
-            id="policy"
-          />
-          <label class="modal-lable" for="policy">
-            <span class="checkbox-custom">
-              <svg class="checkbox-custom-svg" width="10" height="8">
-                <use href="./images/icons.svg#check"></use>
-              </svg> </span
-            >I accept the terms and conditions of the
-            <a class="policy-link" href=""> Privacy Policy</a>
-          </label>
-        </div>
-
-        <button class="btn modal-btn" type="submit">Send</button>
       </div>
     </div>
     <!-- #endregion Overlay -->
