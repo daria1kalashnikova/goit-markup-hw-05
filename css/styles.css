@@ -15,7 +15,7 @@
   --hero-background: rgba(46, 47, 66, 0.7);
   --white-background: rgb(255, 255, 255);
   --modal-background: rgb(252, 252, 252);
-  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: var(--transition);
 }
 
 /* #endregion */
@@ -59,6 +59,7 @@ button {
   color: currentColor;
   cursor: pointer;
   font-family: inherit;
+  padding: 0;
 }
 
 input,
@@ -121,7 +122,7 @@ address {
 .logo-dark {
   color: var(--dark);
   transition-property: color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition);
 }
 
 .logo-dark:active,
@@ -132,7 +133,7 @@ address {
 .logo-light {
   color: var(--light);
   transition-property: color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition);
 }
 
 .logo-light:active,
@@ -151,7 +152,7 @@ address {
 }
 
 .address-link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition);
 }
 
 .address-link:hover,
@@ -175,7 +176,7 @@ address {
   border-width: 0;
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(var(--dark), 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition);
 }
 
 .btn:hover,
@@ -211,7 +212,7 @@ address {
   border-radius: 50%;
   color: var(--light);
   background-color: var(--primary-brand);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition);
   transition-property: background-color;
 }
 
@@ -272,7 +273,7 @@ footer .social-icons-link:focus {
   display: block;
   padding: 24px 0;
   position: relative;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition);
 }
 
 .header-nav-link::after {
@@ -429,7 +430,7 @@ footer .social-icons-link:focus {
 .portfolio-item {
   width: calc((100% - 48px) / 3);
   background-color: var(--white-background);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--transition);
 }
 .portfolio-item:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -453,7 +454,7 @@ footer .social-icons-link:focus {
   background: var(--primary-brand);
   padding: 40px 32px;
   transform: translatey(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition);
 }
 
 .portfolio-item:hover .overlay {
@@ -588,8 +589,7 @@ footer .social-icons-list {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--transition), visibility var(--transition);
 }
 
 .modal {
@@ -604,7 +604,7 @@ footer .social-icons-list {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition);
 }
 
 .modal-close {
@@ -613,13 +613,13 @@ footer .social-icons-list {
   right: 24px;
   width: 24px;
   height: 24px;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: var(--accent);
-  stroke-width: 1px;
-  stroke: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color var(--transition), border var(--transition);
 }
 
 .modal-close:hover,
@@ -630,6 +630,7 @@ footer .social-icons-list {
 
 .modal-svg {
   fill: var(--dark);
+  transition: fill var(--transition);
 }
 .modal-close:hover .modal-svg,
 .modal-close:focus .modal-svg {
@@ -693,7 +694,7 @@ footer .social-icons-list {
   width: 100%;
   height: 40px;
   padding-left: 38px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--transition);
 }
 
 .input-svg {
@@ -702,7 +703,7 @@ footer .social-icons-list {
   transform: translatey(-50%);
   left: 16px;
   fill: var(--dark);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition);
 }
 
 textarea.modal-input {
@@ -747,9 +748,8 @@ input[type='checkbox'] {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   fill: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition), border var(--transition),
+    fill var(--transition);
 }
 
 .checkbox-browser:checked + .modal-lable > .checkbox-custom {
