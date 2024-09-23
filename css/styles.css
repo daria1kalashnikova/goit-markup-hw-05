@@ -562,9 +562,8 @@ footer .social-icons-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   height: 40px;
-  width: 165px;
+  min-width: 165px;
 }
 
 .footer-btn:hover,
@@ -575,6 +574,7 @@ footer .social-icons-list {
 .footer-btn-svg {
   fill: var(--light);
   flex-shrink: 0;
+  margin-left: 16px;
 }
 
 .modal-overlay {
@@ -625,8 +625,7 @@ footer .social-icons-list {
 .modal-close:hover,
 .modal-close:focus {
   background-color: var(--pressed-state);
-  stroke-width: 0;
-  stroke: none;
+  border: none;
 }
 
 .modal-svg {
@@ -687,7 +686,8 @@ footer .social-icons-list {
 }
 
 .modal-input {
-  outline: none;
+  outline: transparent;
+  background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 100%;
@@ -698,7 +698,8 @@ footer .social-icons-list {
 
 .input-svg {
   position: absolute;
-  top: 8px;
+  top: 50%;
+  transform: translatey(-50%);
   left: 16px;
   fill: var(--dark);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -708,12 +709,13 @@ textarea.modal-input {
   resize: none;
   padding: 8px 16px;
   height: 120px;
-}
-
-textarea::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+textarea::placeholder {
   color: rgba(46, 47, 66, 0.4);
 }
 
@@ -745,6 +747,9 @@ input[type='checkbox'] {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-browser:checked + .modal-lable > .checkbox-custom {
