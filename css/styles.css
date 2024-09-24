@@ -748,6 +748,7 @@ textarea::placeholder {
   fill: transparent;
   transition: background-color var(--transition), border var(--transition),
     fill var(--transition);
+  cursor: pointer;
 }
 
 .checkbox-browser:checked + .modal-lable > .checkbox-custom {
@@ -755,5 +756,12 @@ textarea::placeholder {
   border: none;
   fill: var(--light);
 }
+
+/* #region Try */
+.checkbox-browser:focus-visible .checkbox-custom {
+  outline: 1px solid var(--primary-brand);
+  outline-offset: 2px;
+}
+/* #endregion */
 
 /* #endregion */
