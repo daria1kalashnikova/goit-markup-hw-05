@@ -704,6 +704,7 @@ footer .social-icons-list {
   left: 16px;
   fill: var(--dark);
   transition: fill var(--transition);
+  pointer-events: none;
 }
 
 textarea.modal-input {
@@ -733,9 +734,6 @@ textarea::placeholder {
   text-decoration-skip-ink: none;
   color: var(--primary-brand);
   cursor: pointer;
-}
-
-input[type='checkbox'] {
 }
 
 .checkbox-custom {
