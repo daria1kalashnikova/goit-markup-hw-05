@@ -757,11 +757,9 @@ textarea::placeholder {
   fill: var(--light);
 }
 
-/* #region Try */
-.checkbox-browser:focus-visible .checkbox-custom {
+.checkbox-browser:focus-visible + .modal-lable > .checkbox-custom {
   outline: 1px solid var(--primary-brand);
   outline-offset: 2px;
 }
-/* #endregion */
 
 /* #endregion */
